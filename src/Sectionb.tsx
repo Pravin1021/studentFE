@@ -94,7 +94,7 @@ const Sectionb = () => {
 
     useEffect(()=>{
         getDataB()
-    },[presentFuncB,absentFuncB])
+    },[presentFuncB,absentFuncB,addFormB])
 
 
   return (

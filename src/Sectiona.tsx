@@ -86,7 +86,7 @@ const Sectiona = () => {
         const todayDateA = new Date().toISOString();
 
         try{
-            await axios.put(`https://sample-6r5q.onrender.com/FormB/${dta._id}`,{attendance:"Absent",date:todayDateA})
+            await axios.put(`https://sample-6r5q.onrender.com/FormA/${dta._id}`,{attendance:"Absent",date:todayDateA})
         }
         catch(err){
             console.log(err);
@@ -95,7 +95,7 @@ const Sectiona = () => {
 
     useEffect(()=>{
         getDataA()
-    },[presentFuncA,absentFuncA])
+    },[presentFuncA,absentFuncA,addFormA])
 
   return (
     <>
