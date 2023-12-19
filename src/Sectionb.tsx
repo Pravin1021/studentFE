@@ -41,7 +41,7 @@ const Sectionb = () => {
 
     const addFormB=async()=>{
         try{
-          await axios.post("http://localhost:3001/FormB",{name:dataB,attendance:"",date:""})
+          await axios.post("https://sample-6r5q.onrender.com/FormB",{name:dataB,attendance:"",date:""})
         }
         catch(err){
             console.log(err);
@@ -51,7 +51,7 @@ const Sectionb = () => {
 
     const getDataB=async()=>{
         try{
-            const response=await axios.get("http://localhost:3001/Sectionb")
+            const response=await axios.get("https://sample-6r5q.onrender.com/Sectionb")
             const df=response.data
             setFormData(df)
             console.log(df);
@@ -73,7 +73,7 @@ const Sectionb = () => {
         const todayDateA = new Date().toISOString();
 
         try{
-            await axios.put(`http://localhost:3001/FormB/${dta._id}`,{attendance:"Present",date:todayDateA})
+            await axios.put(`https://sample-6r5q.onrender.com/FormB/${dta._id}`,{attendance:"Present",date:todayDateA})
         }
         catch(err){
             console.log(err);
@@ -84,7 +84,7 @@ const Sectionb = () => {
         const todayDateA = new Date().toISOString();
 
         try{
-            await axios.put(`http://localhost:3001/FormB/${dta._id}`,{attendance:"Absent",date:todayDateA})
+            await axios.put(`https://sample-6r5q.onrender.com/FormB/${dta._id}`,{attendance:"Absent",date:todayDateA})
         }
         catch(err){
             console.log(err);

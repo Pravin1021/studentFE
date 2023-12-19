@@ -5,8 +5,7 @@ import Button from '@mui/material/Button';
 import { TextField } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { Dropdown } from '@mui/base/Dropdown';
-import { Menu } from '@mui/base/Menu';
+
 
 
 const style = {
@@ -46,7 +45,7 @@ const Sectiona = () => {
 
     const addFormA=async()=>{
         try{
-          await axios.post("http://localhost:3001/FormA",{name:dataA,attendance:"",date:""})
+          await axios.post("https://sample-6r5q.onrender.com/FormA",{name:dataA,attendance:"",date:""})
         }
         catch(err){
             console.log(err);
@@ -55,7 +54,7 @@ const Sectiona = () => {
 
     const getDataA=async()=>{
         try{
-            const response=await axios.get("http://localhost:3001/")
+            const response=await axios.get("https://sample-6r5q.onrender.com/")
             const df=response.data
             setFormData(df)
         }
@@ -76,7 +75,7 @@ const Sectiona = () => {
         const todayDateA = new Date().toISOString();
 
         try{
-            await axios.put(`http://localhost:3001/FormA/${dta._id}`,{attendance:"Present",date:todayDateA})
+            await axios.put(`https://sample-6r5q.onrender.com/FormA/${dta._id}`,{attendance:"Present",date:todayDateA})
         }
         catch(err){
             console.log(err);
@@ -87,7 +86,7 @@ const Sectiona = () => {
         const todayDateA = new Date().toISOString();
 
         try{
-            await axios.put(`http://localhost:3001/FormA/${dta._id}`,{attendance:"Absent",date:todayDateA})
+            await axios.put(`https://sample-6r5q.onrender.com/FormB/${dta._id}`,{attendance:"Absent",date:todayDateA})
         }
         catch(err){
             console.log(err);
